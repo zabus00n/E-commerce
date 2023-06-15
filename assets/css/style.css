@@ -7,6 +7,11 @@
     text-decoration: none;
 }
 
+main {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
 nav {
     grid-area: nav;
     height: 10vh;
@@ -15,13 +20,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 aside {
     grid-area: aside;
-    height: 100vh;
+    height: 100%;
     width: 20vw;
-    background-color: #e7e7e7;
+    background-color: blue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,9 +35,13 @@ aside {
 
 .product-gallery {
     grid-area: product-gallery;
-    height: 100vh;
+    height: 100%;
     width: 80vw;
-    background-color: #e7e7e7;
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem;
 }
 
 footer {
@@ -47,16 +57,48 @@ footer {
 
 .grid-container {
     display: grid;
-    background-color: #e7e7e7;
+    background-color: green;
     grid-template-areas:
-    "nav nav"
-    "aside product-gallery"
-    "footer footer";
+        "nav nav"
+        "aside product-gallery"
+        "footer footer";
+    
 }
 
-.product-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    padding: 20px;
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;        
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    row-gap: 1rem;
+    height: 100%;
+    padding: 1rem 0 1rem 0;
+}
+
+.product-buy-button {
+    border: none;
+    background-color: #25527b;
+    color: white;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+img {
+    height: 80%;
+    object-fit: cover;
+}
+
+.shoes img {
+    padding: 2.5rem;
+}
+
+.hoodie img {
+    padding: 1rem;
 }
